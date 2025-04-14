@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildRoots Bistro | Menu</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6F4E37',    // Coffee brown
+                        secondary: '#2A2118',   // Dark brown
+                        light: '#F5F0E6',      // Beige background
+                        cream: '#FFFDFA',      // Card background
+                        accent: '#C4A484'      // Latte accent
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #F5F0E6;
+        }
+        .menu-category::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: #6F4E37;
+            margin: 8px auto 20px;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-body text-secondary">
+    <!-- Navigation -->
+    <nav class="bg-cream py-4 shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-heading font-bold text-primary">WildRoots</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-primary">Home</a>
+                <a href="menu.html" class="font-bold text-primary">Menu</a>
+                <a href="#contact" class="hover:text-primary">Contact</a>
+                <a href="#order" class="bg-primary text-cream px-6 py-2 rounded-full hover:bg-primary/90">Order Now</a>
+            </div>
+            <button class="md:hidden text-primary">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <header class="py-16 text-center bg-[url('assets/images/coffee-beans-bg.webp')] bg-cover bg-opacity-10">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4">Our Seasonal Menu</h1>
+            <p class="text-lg max-w-2xl mx-auto">Inspired by nature, crafted with care.</p>
+        </div>
+    </header>
+
+    <!-- Menu Sections -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Coffee & Drinks -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-heading font-bold text-center mb-8 menu-category">Coffee & Drinks</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="menu-item bg-cream p-6 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-heading font-bold">Forest Floor Latte</h3>
+                        <span class="font-bold text-primary">$6.50</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Mushroom-infused espresso with oat milk foam</p>
+                    <img src="assets/images/menu-latte.webp" alt="Forest Floor Latte" class="w-full h-48 object-cover rounded">
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item bg-cream p-6 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-heading font-bold">Windfall Iced Tea</h3>
+                        <span class="font-bold text-primary">$5.50</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Apple, rosemary, sparkling rainwater</p>
+                    <img src="assets/images/menu-tea.webp" alt="Windfall Iced Tea" class="w-full h-48 object-cover rounded">
+                </div>
+                
+                <!-- Item 3: Canopy Cold Brew -->
+                <div class="menu-item bg-cream p-6 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-heading font-bold">Canopy Cold Brew</h3>
+                        <span class="font-bold text-primary">$5.75</span>
+                </div>
+    <p class="text-gray-600 mb-4">Slow-steeped for 18 hours with cinnamon bark</p>
+    <img src="assets/images/menu-coldbrew.webp" alt="Canopy Cold Brew" class="w-full h-48 object-cover rounded">
+</div>
+                <!-- Add 4 more drink items here -->
+            </div>
+        </section>
+
+        <!-- Breakfast -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-heading font-bold text-center mb-8 menu-category">Breakfast</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="menu-item bg-cream p-6 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-heading font-bold">Sunrise Smoothie Bowl</h3>
+                        <span class="font-bold text-primary">$9.00</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Turmeric, mango, edible flowers</p>
+                    <img src="assets/images/menu-smoothie.webp" alt="Sunrise Smoothie Bowl" class="w-full h-48 object-cover rounded">
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item bg-cream p-6 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-heading font-bold">Dewdrop Chia Pudding</h3>
+                        <span class="font-bold text-primary">$7.50</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Lavender honey, bee pollen, seasonal fruit</p>
+                    <img src="assets/images/menu-chia.webp" alt="Dewdrop Chia Pudding" class="w-full h-48 object-cover rounded">
+                </div>
+                
+                <!-- Item 3: Timberland Toast -->
+                <div class="menu-item bg-cream p-6 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-heading font-bold">Timberland Toast</h3>
+                        <span class="font-bold text-primary">$8.25</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Sourdough with acorn butter & forest honey</p>
+                    <img src="assets/images/menu-toast.webp" alt="Timberland Toast" class="w-full h-48 object-cover rounded">
+                </div>
+                <!-- Add 4 more breakfast items here -->
+            </div>
+        </section>
+
+        <!-- Lunch & Dinner -->
+        <section class="mb-20">
+            <h2 class="text-3xl font-heading font-bold text-center mb-8 menu-category">Lunch & Dinner</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="menu-item bg-cream p-6 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-heading font-bold">Rooted Burger</h3>
+                        <span class="font-bold text-primary">$12.00</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Beetroot patty, charcoal bun, wild greens</p>
+                    <img src="assets/images/menu-burger.webp" alt="Rooted Burger" class="w-full h-48 object-cover rounded">
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item bg-cream p-6 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-heading font-bold">Moss Caprese Salad</h3>
+                        <span class="font-bold text-primary">$10.50</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Pesto, green tomatoes, basil snow</p>
+                    <img src="assets/images/menu-salad.webp" alt="Moss Caprese Salad" class="w-full h-48 object-cover rounded">
+                </div>
+                
+                <!-- Add 4 more lunch/dinner items here -->
+            </div>
+        </section>
+
+        <!-- Desserts -->
+        <section>
+            <h2 class="text-3xl font-heading font-bold text-center mb-8 menu-category">Desserts</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="menu-item bg-cream p-6 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-heading font-bold">Wild Berry Pavlova</h3>
+                        <span class="font-bold text-primary">$8.50</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Meringue + foraged berries + elderflower</p>
+                    <img src="assets/images/menu-pavlova.webp" alt="Wild Berry Pavlova" class="w-full h-48 object-cover rounded">
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item bg-cream p-6 rounded-lg shadow-md hover:shadow-lg">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-heading font-bold">Campfire Chocolate Tart</h3>
+                        <span class="font-bold text-primary">$8.00</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Smoked salt, cedar-infused ganache</p>
+                    <img src="assets/images/menu-tart.webp" alt="Campfire Chocolate Tart" class="w-full h-48 object-cover rounded">
+                </div>
+                
+                <!-- Add 2 more dessert items here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-cream py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-heading font-bold mb-4">WildRoots Bistro</h3>
+                    <p>123 Forest Lane, Green Valley</p>
+                    <p>Open: 8AM - 8PM Daily</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-heading font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent">Home</a></li>
+                        <li><a href="menu.html" class="hover:text-accent">Menu</a></li>
+                        <li><a href="#contact" class="hover:text-accent">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-heading font-bold mb-4">Newsletter</h3>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l w-full">
+                        <button type="submit" class="bg-primary px-4 py-2 rounded-r hover:bg-primary/90">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-cream/20 mt-8 pt-8 text-center">
+                <p>&copy; 2023 WildRoots Bistro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle (simplified)
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('.md\\:flex');
+            nav.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
